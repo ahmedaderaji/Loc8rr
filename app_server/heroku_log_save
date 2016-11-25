@@ -1,0 +1,232 @@
+Microsoft Windows [Version 10.0.14393]
+(c) 2016 Microsoft Corporation. All rights reserved.
+
+C:\Users\asusaji>cd C:\Users\asusaji\Google Drive\01_Application\MEAN
+
+C:\Users\asusaji\Google Drive\01_Application\MEAN>heroku login
+Enter your Heroku credentials.
+Email: ahmedaderaji@yahoo.com
+Password (typing will be hidden):
+Logged in as ahmedaderaji@yahoo.com
+
+C:\Users\asusaji\Google Drive\01_Application\MEAN>git init
+Reinitialized existing Git repository in C:/Users/asusaji/Google Drive/01_Application/MEAN/.git/
+
+C:\Users\asusaji\Google Drive\01_Application\MEAN>git add .
+
+C:\Users\asusaji\Google Drive\01_Application\MEAN>git commit -m "first version"
+[master 1f219e4] first version
+ 6 files changed, 217 insertions(+), 68 deletions(-)
+ create mode 100644 loc8r/app_server/views/_includes/sharedHTMLfunctions.jade
+ create mode 100644 loc8r/app_server/views/generic-text.jade
+ create mode 100644 loc8r/app_server/views/location-review-form.jade
+ rewrite loc8r/app_server/views/locations-info.jade (91%)
+ rewrite loc8r/app_server/views/locations-list.jade (80%)
+
+C:\Users\asusaji\Google Drive\01_Application\MEAN>heroku create
+Creating app... done, quiet-waters-97039
+https://quiet-waters-97039.herokuapp.com/ | https://git.heroku.com/quiet-waters-97039.git
+
+
+C:\Users\asusaji\Google Drive\01_Application\MEAN>git push heroku master
+Counting objects: 1205, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (1133/1133), done.
+Writing objects: 100% (1205/1205), 2.18 MiB | 337.00 KiB/s, done.
+Total 1205 (delta 242), reused 0 (delta 0)
+remote: Compressing source files... done.
+remote: Building source:
+remote:
+remote: -----> Node.js app detected
+remote:
+remote: -----> Creating runtime environment
+remote:
+remote:        NPM_CONFIG_LOGLEVEL=error
+remote:        NPM_CONFIG_PRODUCTION=true
+remote:        NODE_ENV=production
+remote:        NODE_MODULES_CACHE=true
+remote:
+remote: -----> Installing binaries
+remote:        engines.node (package.json):  ~4.4.5
+remote:        engines.npm (package.json):   ~2.15.5
+remote:
+remote:        Resolving node version ~4.4.5 via semver.io...
+remote:        Downloading and installing node 4.4.7...
+remote:        Resolving npm version ~2.15.5 via semver.io...
+remote:        Downloading and installing npm 2.15.11 (replacing version 2.15.8)...
+remote:
+remote: -----> Restoring cache
+remote:        Skipping cache restore (new runtime signature)
+remote:
+remote: -----> Building dependencies
+remote:        Prebuild detected (node_modules already exists)
+remote:        Rebuilding any native modules
+remote:        body-parser@1.13.3 /tmp/build_8aa9531823c4993528b28eb26aac1045/loc8r/node_modules/body-parser
+remote:        bytes@2.1.0 /tmp/build_8aa9531823c4993528b28eb26aac1045/loc8r/node_modules/body-parser/node_modules/bytes
+remote:        content-type@1.0.2 /tmp/build_8aa9531823c4993528b28eb26aac1045/loc8r/node_modules/body-parser/node_modules/content-type
+remote:        debug@2.2.0 /tmp/build_8aa9531823c4993528b28eb26aac1045/loc8r/node_modules/debug
+remote:        ms@0.7.1 /tmp/build_8aa9531823c4993528b28eb26aac1045/loc8r/node_modules/debug/node_modules/ms
+remote:        depd@1.0.1 /tmp/build_8aa9531823c4993528b28eb26aac1045/loc8r/node_modules/body-parser/node_modules/depd
+remote:        http-errors@1.3.1 /tmp/build_8aa9531823c4993528b28eb26aac1045/loc8r/node_modules/body-parser/node_modules/http-errors
+remote:        inherits@2.0.3 /tmp/build_8aa9531823c4993528b28eb26aac1045/loc8r/node_modules/body-parser/node_modules/http-errors/node_modules/inherits
+remote:        statuses@1.3.1 /tmp/build_8aa9531823c4993528b28eb26aac1045/loc8r/node_modules/body-parser/node_modules/http-errors/node_modules/statuses
+remote:        iconv-lite@0.4.11 /tmp/build_8aa9531823c4993528b28eb26aac1045/loc8r/node_modules/body-parser/node_modules/iconv-lite
+remote:        on-finished@2.3.0 /tmp/build_8aa9531823c4993528b28eb26aac1045/loc8r/node_modules/body-parser/node_modules/on-finished
+remote:        ee-first@1.1.1 /tmp/build_8aa9531823c4993528b28eb26aac1045/loc8r/node_modules/body-parser/node_modules/on-finished/node_modules/ee-first
+remote:        qs@4.0.0 /tmp/build_8aa9531823c4993528b28eb26aac1045/loc8r/node_modules/body-parser/node_modules/qs
+remote:        raw-body@2.1.7 /tmp/build_8aa9531823c4993528b28eb26aac1045/loc8r/node_modules/body-parser/node_modules/raw-body
+remote:        bytes@2.4.0 /tmp/build_8aa9531823c4993528b28eb26aac1045/loc8r/node_modules/body-parser/node_modules/raw-body/node_modules/bytes
+remote:        iconv-lite@0.4.13 /tmp/build_8aa9531823c4993528b28eb26aac1045/loc8r/node_modules/body-parser/node_modules/raw-body/node_modules/iconv-lite
+remote:        unpipe@1.0.0 /tmp/build_8aa9531823c4993528b28eb26aac1045/loc8r/node_modules/body-parser/node_modules/raw-body/node_modules/unpipe
+remote:        type-is@1.6.13 /tmp/build_8aa9531823c4993528b28eb26aac1045/loc8r/node_modules/body-parser/node_modules/type-is
+remote:        media-typer@0.3.0 /tmp/build_8aa9531823c4993528b28eb26aac1045/loc8r/node_modules/body-parser/node_modules/type-is/node_modules/media-typer
+remote:        mime-types@2.1.12 /tmp/build_8aa9531823c4993528b28eb26aac1045/loc8r/node_modules/body-parser/node_modules/type-is/node_modules/mime-types
+remote:        mime-db@1.24.0 /tmp/build_8aa9531823c4993528b28eb26aac1045/loc8r/node_modules/body-parser/node_modules/type-is/node_modules/mime-types/node_modules/mime-db
+remote:        cookie-parser@1.3.5 /tmp/build_8aa9531823c4993528b28eb26aac1045/loc8r/node_modules/cookie-parser
+remote:        cookie@0.1.3 /tmp/build_8aa9531823c4993528b28eb26aac1045/loc8r/node_modules/cookie-parser/node_modules/cookie
+remote:        cookie-signature@1.0.6 /tmp/build_8aa9531823c4993528b28eb26aac1045/loc8r/node_modules/cookie-parser/node_modules/cookie-signature
+remote:        express@4.13.4 /tmp/build_8aa9531823c4993528b28eb26aac1045/loc8r/node_modules/express
+remote:        accepts@1.2.13 /tmp/build_8aa9531823c4993528b28eb26aac1045/loc8r/node_modules/express/node_modules/accepts
+remote:        mime-types@2.1.12 /tmp/build_8aa9531823c4993528b28eb26aac1045/loc8r/node_modules/express/node_modules/accepts/node_modules/mime-types
+remote:        mime-db@1.24.0 /tmp/build_8aa9531823c4993528b28eb26aac1045/loc8r/node_modules/express/node_modules/accepts/node_modules/mime-types/node_modules/mime-db
+remote:        negotiator@0.5.3 /tmp/build_8aa9531823c4993528b28eb26aac1045/loc8r/node_modules/express/node_modules/accepts/node_modules/negotiator
+remote:        array-flatten@1.1.1 /tmp/build_8aa9531823c4993528b28eb26aac1045/loc8r/node_modules/express/node_modules/array-flatten
+remote:        content-disposition@0.5.1 /tmp/build_8aa9531823c4993528b28eb26aac1045/loc8r/node_modules/express/node_modules/content-disposition
+remote:        content-type@1.0.2 /tmp/build_8aa9531823c4993528b28eb26aac1045/loc8r/node_modules/express/node_modules/content-type
+remote:        cookie@0.1.5 /tmp/build_8aa9531823c4993528b28eb26aac1045/loc8r/node_modules/express/node_modules/cookie
+remote:        cookie-signature@1.0.6 /tmp/build_8aa9531823c4993528b28eb26aac1045/loc8r/node_modules/express/node_modules/cookie-signature
+remote:        depd@1.1.0 /tmp/build_8aa9531823c4993528b28eb26aac1045/loc8r/node_modules/express/node_modules/depd
+remote:        escape-html@1.0.3 /tmp/build_8aa9531823c4993528b28eb26aac1045/loc8r/node_modules/express/node_modules/escape-html
+remote:        etag@1.7.0 /tmp/build_8aa9531823c4993528b28eb26aac1045/loc8r/node_modules/express/node_modules/etag
+remote:        finalhandler@0.4.1 /tmp/build_8aa9531823c4993528b28eb26aac1045/loc8r/node_modules/express/node_modules/finalhandler
+remote:        on-finished@2.3.0 /tmp/build_8aa9531823c4993528b28eb26aac1045/loc8r/node_modules/express/node_modules/on-finished
+remote:        ee-first@1.1.1 /tmp/build_8aa9531823c4993528b28eb26aac1045/loc8r/node_modules/express/node_modules/on-finished/node_modules/ee-first
+remote:        unpipe@1.0.0 /tmp/build_8aa9531823c4993528b28eb26aac1045/loc8r/node_modules/express/node_modules/finalhandler/node_modules/unpipe
+remote:        fresh@0.3.0 /tmp/build_8aa9531823c4993528b28eb26aac1045/loc8r/node_modules/express/node_modules/fresh
+remote:        merge-descriptors@1.0.1 /tmp/build_8aa9531823c4993528b28eb26aac1045/loc8r/node_modules/express/node_modules/merge-descriptors
+remote:        methods@1.1.2 /tmp/build_8aa9531823c4993528b28eb26aac1045/loc8r/node_modules/express/node_modules/methods
+remote:        parseurl@1.3.1 /tmp/build_8aa9531823c4993528b28eb26aac1045/loc8r/node_modules/express/node_modules/parseurl
+remote:        path-to-regexp@0.1.7 /tmp/build_8aa9531823c4993528b28eb26aac1045/loc8r/node_modules/express/node_modules/path-to-regexp
+remote:        proxy-addr@1.0.10 /tmp/build_8aa9531823c4993528b28eb26aac1045/loc8r/node_modules/express/node_modules/proxy-addr
+remote:        forwarded@0.1.0 /tmp/build_8aa9531823c4993528b28eb26aac1045/loc8r/node_modules/express/node_modules/proxy-addr/node_modules/forwarded
+remote:        ipaddr.js@1.0.5 /tmp/build_8aa9531823c4993528b28eb26aac1045/loc8r/node_modules/express/node_modules/proxy-addr/node_modules/ipaddr.js
+remote:        qs@4.0.0 /tmp/build_8aa9531823c4993528b28eb26aac1045/loc8r/node_modules/express/node_modules/qs
+remote:        range-parser@1.0.3 /tmp/build_8aa9531823c4993528b28eb26aac1045/loc8r/node_modules/express/node_modules/range-parser
+remote:        send@0.13.1 /tmp/build_8aa9531823c4993528b28eb26aac1045/loc8r/node_modules/express/node_modules/send
+remote:        destroy@1.0.4 /tmp/build_8aa9531823c4993528b28eb26aac1045/loc8r/node_modules/express/node_modules/send/node_modules/destroy
+remote:        http-errors@1.3.1 /tmp/build_8aa9531823c4993528b28eb26aac1045/loc8r/node_modules/express/node_modules/send/node_modules/http-errors
+remote:        inherits@2.0.3 /tmp/build_8aa9531823c4993528b28eb26aac1045/loc8r/node_modules/express/node_modules/send/node_modules/http-errors/node_modules/inherits
+remote:        statuses@1.2.1 /tmp/build_8aa9531823c4993528b28eb26aac1045/loc8r/node_modules/express/node_modules/send/node_modules/statuses
+remote:        mime@1.3.4 /tmp/build_8aa9531823c4993528b28eb26aac1045/loc8r/node_modules/express/node_modules/send/node_modules/mime
+remote:        ms@0.7.1 /tmp/build_8aa9531823c4993528b28eb26aac1045/loc8r/node_modules/express/node_modules/send/node_modules/ms
+remote:        serve-static@1.10.3 /tmp/build_8aa9531823c4993528b28eb26aac1045/loc8r/node_modules/express/node_modules/serve-static
+remote:        send@0.13.2 /tmp/build_8aa9531823c4993528b28eb26aac1045/loc8r/node_modules/express/node_modules/serve-static/node_modules/send
+remote:        destroy@1.0.4 /tmp/build_8aa9531823c4993528b28eb26aac1045/loc8r/node_modules/express/node_modules/serve-static/node_modules/send/node_modules/destroy
+remote:        http-errors@1.3.1 /tmp/build_8aa9531823c4993528b28eb26aac1045/loc8r/node_modules/express/node_modules/serve-static/node_modules/send/node_modules/http-errors
+remote:        inherits@2.0.3 /tmp/build_8aa9531823c4993528b28eb26aac1045/loc8r/node_modules/express/node_modules/serve-static/node_modules/send/node_modules/http-errors/node_modules/inherits
+remote:        statuses@1.2.1 /tmp/build_8aa9531823c4993528b28eb26aac1045/loc8r/node_modules/express/node_modules/serve-static/node_modules/send/node_modules/statuses
+remote:        mime@1.3.4 /tmp/build_8aa9531823c4993528b28eb26aac1045/loc8r/node_modules/express/node_modules/serve-static/node_modules/send/node_modules/mime
+remote:        ms@0.7.1 /tmp/build_8aa9531823c4993528b28eb26aac1045/loc8r/node_modules/express/node_modules/serve-static/node_modules/send/node_modules/ms
+remote:        type-is@1.6.13 /tmp/build_8aa9531823c4993528b28eb26aac1045/loc8r/node_modules/express/node_modules/type-is
+remote:        media-typer@0.3.0 /tmp/build_8aa9531823c4993528b28eb26aac1045/loc8r/node_modules/express/node_modules/type-is/node_modules/media-typer
+remote:        mime-types@2.1.12 /tmp/build_8aa9531823c4993528b28eb26aac1045/loc8r/node_modules/express/node_modules/type-is/node_modules/mime-types
+remote:        mime-db@1.24.0 /tmp/build_8aa9531823c4993528b28eb26aac1045/loc8r/node_modules/express/node_modules/type-is/node_modules/mime-types/node_modules/mime-db
+remote:        utils-merge@1.0.0 /tmp/build_8aa9531823c4993528b28eb26aac1045/loc8r/node_modules/express/node_modules/utils-merge
+remote:        vary@1.0.1 /tmp/build_8aa9531823c4993528b28eb26aac1045/loc8r/node_modules/express/node_modules/vary
+remote:        jade@1.11.0 /tmp/build_8aa9531823c4993528b28eb26aac1045/loc8r/node_modules/jade
+remote:        character-parser@1.2.1 /tmp/build_8aa9531823c4993528b28eb26aac1045/loc8r/node_modules/jade/node_modules/character-parser
+remote:        clean-css@3.4.20 /tmp/build_8aa9531823c4993528b28eb26aac1045/loc8r/node_modules/jade/node_modules/clean-css
+remote:        commander@2.8.1 /tmp/build_8aa9531823c4993528b28eb26aac1045/loc8r/node_modules/jade/node_modules/clean-css/node_modules/commander
+remote:        graceful-readlink@1.0.1 /tmp/build_8aa9531823c4993528b28eb26aac1045/loc8r/node_modules/jade/node_modules/clean-css/node_modules/commander/node_modules/graceful-readlink
+remote:        source-map@0.4.4 /tmp/build_8aa9531823c4993528b28eb26aac1045/loc8r/node_modules/jade/node_modules/clean-css/node_modules/source-map
+remote:        amdefine@1.0.1 /tmp/build_8aa9531823c4993528b28eb26aac1045/loc8r/node_modules/jade/node_modules/clean-css/node_modules/source-map/node_modules/amdefine
+remote:        commander@2.6.0 /tmp/build_8aa9531823c4993528b28eb26aac1045/loc8r/node_modules/jade/node_modules/commander
+remote:        constantinople@3.0.2 /tmp/build_8aa9531823c4993528b28eb26aac1045/loc8r/node_modules/jade/node_modules/constantinople
+remote:        acorn@2.7.0 /tmp/build_8aa9531823c4993528b28eb26aac1045/loc8r/node_modules/jade/node_modules/constantinople/node_modules/acorn
+remote:        jstransformer@0.0.2 /tmp/build_8aa9531823c4993528b28eb26aac1045/loc8r/node_modules/jade/node_modules/jstransformer
+remote:        is-promise@2.1.0 /tmp/build_8aa9531823c4993528b28eb26aac1045/loc8r/node_modules/jade/node_modules/jstransformer/node_modules/is-promise
+remote:        promise@6.1.0 /tmp/build_8aa9531823c4993528b28eb26aac1045/loc8r/node_modules/jade/node_modules/jstransformer/node_modules/promise
+remote:        asap@1.0.0 /tmp/build_8aa9531823c4993528b28eb26aac1045/loc8r/node_modules/jade/node_modules/jstransformer/node_modules/promise/node_modules/asap
+remote:        mkdirp@0.5.1 /tmp/build_8aa9531823c4993528b28eb26aac1045/loc8r/node_modules/jade/node_modules/mkdirp
+remote:        minimist@0.0.8 /tmp/build_8aa9531823c4993528b28eb26aac1045/loc8r/node_modules/jade/node_modules/mkdirp/node_modules/minimist
+remote:        transformers@2.1.0 /tmp/build_8aa9531823c4993528b28eb26aac1045/loc8r/node_modules/jade/node_modules/transformers
+remote:        promise@2.0.0 /tmp/build_8aa9531823c4993528b28eb26aac1045/loc8r/node_modules/jade/node_modules/transformers/node_modules/promise
+remote:        is-promise@1.0.1 /tmp/build_8aa9531823c4993528b28eb26aac1045/loc8r/node_modules/jade/node_modules/transformers/node_modules/promise/node_modules/is-promise
+remote:        css@1.0.8 /tmp/build_8aa9531823c4993528b28eb26aac1045/loc8r/node_modules/jade/node_modules/transformers/node_modules/css
+remote:        css-parse@1.0.4 /tmp/build_8aa9531823c4993528b28eb26aac1045/loc8r/node_modules/jade/node_modules/transformers/node_modules/css/node_modules/css-parse
+remote:        css-stringify@1.0.5 /tmp/build_8aa9531823c4993528b28eb26aac1045/loc8r/node_modules/jade/node_modules/transformers/node_modules/css/node_modules/css-stringify
+remote:        uglify-js@2.2.5 /tmp/build_8aa9531823c4993528b28eb26aac1045/loc8r/node_modules/jade/node_modules/transformers/node_modules/uglify-js
+remote:        source-map@0.1.43 /tmp/build_8aa9531823c4993528b28eb26aac1045/loc8r/node_modules/jade/node_modules/transformers/node_modules/uglify-js/node_modules/source-map
+remote:        amdefine@1.0.1 /tmp/build_8aa9531823c4993528b28eb26aac1045/loc8r/node_modules/jade/node_modules/transformers/node_modules/uglify-js/node_modules/source-map/node_modules/amdefine
+remote:        optimist@0.3.7 /tmp/build_8aa9531823c4993528b28eb26aac1045/loc8r/node_modules/jade/node_modules/transformers/node_modules/uglify-js/node_modules/optimist
+remote:        wordwrap@0.0.3 /tmp/build_8aa9531823c4993528b28eb26aac1045/loc8r/node_modules/jade/node_modules/transformers/node_modules/uglify-js/node_modules/optimist/node_modules/wordwrap
+remote:        uglify-js@2.7.4 /tmp/build_8aa9531823c4993528b28eb26aac1045/loc8r/node_modules/jade/node_modules/uglify-js
+remote:        async@0.2.10 /tmp/build_8aa9531823c4993528b28eb26aac1045/loc8r/node_modules/jade/node_modules/uglify-js/node_modules/async
+remote:        source-map@0.5.6 /tmp/build_8aa9531823c4993528b28eb26aac1045/loc8r/node_modules/jade/node_modules/uglify-js/node_modules/source-map
+remote:        uglify-to-browserify@1.0.2 /tmp/build_8aa9531823c4993528b28eb26aac1045/loc8r/node_modules/jade/node_modules/uglify-js/node_modules/uglify-to-browserify
+remote:        yargs@3.10.0 /tmp/build_8aa9531823c4993528b28eb26aac1045/loc8r/node_modules/jade/node_modules/uglify-js/node_modules/yargs
+remote:        camelcase@1.2.1 /tmp/build_8aa9531823c4993528b28eb26aac1045/loc8r/node_modules/jade/node_modules/uglify-js/node_modules/yargs/node_modules/camelcase
+remote:        cliui@2.1.0 /tmp/build_8aa9531823c4993528b28eb26aac1045/loc8r/node_modules/jade/node_modules/uglify-js/node_modules/yargs/node_modules/cliui
+remote:        center-align@0.1.3 /tmp/build_8aa9531823c4993528b28eb26aac1045/loc8r/node_modules/jade/node_modules/uglify-js/node_modules/yargs/node_modules/cliui/node_modules/center-align
+remote:        align-text@0.1.4 /tmp/build_8aa9531823c4993528b28eb26aac1045/loc8r/node_modules/jade/node_modules/uglify-js/node_modules/yargs/node_modules/cliui/node_modules/center-align/node_modules/align-text
+remote:        kind-of@3.0.4 /tmp/build_8aa9531823c4993528b28eb26aac1045/loc8r/node_modules/jade/node_modules/uglify-js/node_modules/yargs/node_modules/cliui/node_modules/center-align/node_modules/align-text/node_modules/kind-of
+remote:        is-buffer@1.1.4 /tmp/build_8aa9531823c4993528b28eb26aac1045/loc8r/node_modules/jade/node_modules/uglify-js/node_modules/yargs/node_modules/cliui/node_modules/center-align/node_modules/align-text/node_modules/kind-of/node_modules/is-buffer
+remote:        longest@1.0.1 /tmp/build_8aa9531823c4993528b28eb26aac1045/loc8r/node_modules/jade/node_modules/uglify-js/node_modules/yargs/node_modules/cliui/node_modules/center-align/node_modules/align-text/node_modules/longest
+remote:        repeat-string@1.6.1 /tmp/build_8aa9531823c4993528b28eb26aac1045/loc8r/node_modules/jade/node_modules/uglify-js/node_modules/yargs/node_modules/cliui/node_modules/center-align/node_modules/align-text/node_modules/repeat-string
+remote:        lazy-cache@1.0.4 /tmp/build_8aa9531823c4993528b28eb26aac1045/loc8r/node_modules/jade/node_modules/uglify-js/node_modules/yargs/node_modules/cliui/node_modules/center-align/node_modules/lazy-cache
+remote:        right-align@0.1.3 /tmp/build_8aa9531823c4993528b28eb26aac1045/loc8r/node_modules/jade/node_modules/uglify-js/node_modules/yargs/node_modules/cliui/node_modules/right-align
+remote:        align-text@0.1.4 /tmp/build_8aa9531823c4993528b28eb26aac1045/loc8r/node_modules/jade/node_modules/uglify-js/node_modules/yargs/node_modules/cliui/node_modules/right-align/node_modules/align-text
+remote:        kind-of@3.0.4 /tmp/build_8aa9531823c4993528b28eb26aac1045/loc8r/node_modules/jade/node_modules/uglify-js/node_modules/yargs/node_modules/cliui/node_modules/right-align/node_modules/align-text/node_modules/kind-of
+remote:        is-buffer@1.1.4 /tmp/build_8aa9531823c4993528b28eb26aac1045/loc8r/node_modules/jade/node_modules/uglify-js/node_modules/yargs/node_modules/cliui/node_modules/right-align/node_modules/align-text/node_modules/kind-of/node_modules/is-buffer
+remote:        longest@1.0.1 /tmp/build_8aa9531823c4993528b28eb26aac1045/loc8r/node_modules/jade/node_modules/uglify-js/node_modules/yargs/node_modules/cliui/node_modules/right-align/node_modules/align-text/node_modules/longest
+remote:        repeat-string@1.6.1 /tmp/build_8aa9531823c4993528b28eb26aac1045/loc8r/node_modules/jade/node_modules/uglify-js/node_modules/yargs/node_modules/cliui/node_modules/right-align/node_modules/align-text/node_modules/repeat-string
+remote:        wordwrap@0.0.2 /tmp/build_8aa9531823c4993528b28eb26aac1045/loc8r/node_modules/jade/node_modules/uglify-js/node_modules/yargs/node_modules/cliui/node_modules/wordwrap
+remote:        decamelize@1.2.0 /tmp/build_8aa9531823c4993528b28eb26aac1045/loc8r/node_modules/jade/node_modules/uglify-js/node_modules/yargs/node_modules/decamelize
+remote:        window-size@0.1.0 /tmp/build_8aa9531823c4993528b28eb26aac1045/loc8r/node_modules/jade/node_modules/uglify-js/node_modules/yargs/node_modules/window-size
+remote:        void-elements@2.0.1 /tmp/build_8aa9531823c4993528b28eb26aac1045/loc8r/node_modules/jade/node_modules/void-elements
+remote:        with@4.0.3 /tmp/build_8aa9531823c4993528b28eb26aac1045/loc8r/node_modules/jade/node_modules/with
+remote:        acorn@1.2.2 /tmp/build_8aa9531823c4993528b28eb26aac1045/loc8r/node_modules/jade/node_modules/with/node_modules/acorn
+remote:        acorn-globals@1.0.9 /tmp/build_8aa9531823c4993528b28eb26aac1045/loc8r/node_modules/jade/node_modules/with/node_modules/acorn-globals
+remote:        acorn@2.7.0 /tmp/build_8aa9531823c4993528b28eb26aac1045/loc8r/node_modules/jade/node_modules/with/node_modules/acorn-globals/node_modules/acorn
+remote:        morgan@1.6.1 /tmp/build_8aa9531823c4993528b28eb26aac1045/loc8r/node_modules/morgan
+remote:        basic-auth@1.0.4 /tmp/build_8aa9531823c4993528b28eb26aac1045/loc8r/node_modules/morgan/node_modules/basic-auth
+remote:        depd@1.0.1 /tmp/build_8aa9531823c4993528b28eb26aac1045/loc8r/node_modules/morgan/node_modules/depd
+remote:        on-finished@2.3.0 /tmp/build_8aa9531823c4993528b28eb26aac1045/loc8r/node_modules/morgan/node_modules/on-finished
+remote:        ee-first@1.1.1 /tmp/build_8aa9531823c4993528b28eb26aac1045/loc8r/node_modules/morgan/node_modules/on-finished/node_modules/ee-first
+remote:        on-headers@1.0.1 /tmp/build_8aa9531823c4993528b28eb26aac1045/loc8r/node_modules/morgan/node_modules/on-headers
+remote:        serve-favicon@2.3.0 /tmp/build_8aa9531823c4993528b28eb26aac1045/loc8r/node_modules/serve-favicon
+remote:        etag@1.7.0 /tmp/build_8aa9531823c4993528b28eb26aac1045/loc8r/node_modules/serve-favicon/node_modules/etag
+remote:        fresh@0.3.0 /tmp/build_8aa9531823c4993528b28eb26aac1045/loc8r/node_modules/serve-favicon/node_modules/fresh
+remote:        ms@0.7.1 /tmp/build_8aa9531823c4993528b28eb26aac1045/loc8r/node_modules/serve-favicon/node_modules/ms
+remote:        parseurl@1.3.1 /tmp/build_8aa9531823c4993528b28eb26aac1045/loc8r/node_modules/serve-favicon/node_modules/parseurl
+remote:        Installing any new modules (package.json)
+remote:
+remote: -----> Caching build
+remote:        Clearing previous node cache
+remote:        Saving 2 cacheDirectories (default):
+remote:        - node_modules
+remote:        - bower_components (nothing to cache)
+remote:
+remote: -----> Build succeeded!
+remote:        ├── body-parser@1.13.3
+remote:        ├── cookie-parser@1.3.5
+remote:        ├── debug@2.2.0
+remote:        ├── express@4.13.4
+remote:        ├── jade@1.11.0
+remote:        ├── morgan@1.6.1
+remote:        └── serve-favicon@2.3.0
+remote:
+remote: -----> Discovering process types
+remote:        Procfile declares types -> web
+remote:
+remote: -----> Compressing...
+remote:        Done: 14.9M
+remote: -----> Launching...
+remote:        Released v3
+remote:        https://quiet-waters-97039.herokuapp.com/ deployed to Heroku
+remote:
+remote: Verifying deploy.... done.
+To https://git.heroku.com/quiet-waters-97039.git
+ * [new branch]      master -> master
+
+C:\Users\asusaji\Google Drive\01_Application\MEAN>git push hero master
